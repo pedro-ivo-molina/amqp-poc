@@ -1,0 +1,13 @@
+default: &default
+ adapter: postgresql
+ encoding: unicode
+ host: db
+ username: postgres
+ password: password
+ pool: 5
+development:
+ <<: *default
+ database: amqp-send-to-receive_development
+test:
+ <<: *default
+ database: amqp-send-to-receive_test
